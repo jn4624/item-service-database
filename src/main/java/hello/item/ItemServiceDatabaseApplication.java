@@ -1,8 +1,6 @@
 package hello.item;
 
-import hello.item.config.JdbcTemplateV1Config;
-import hello.item.config.JdbcTemplateV2Config;
-import hello.item.config.MemoryConfig;
+import hello.item.config.JdbcTemplateV3Config;
 import hello.item.repository.ItemRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +10,8 @@ import org.springframework.context.annotation.Profile;
 
 //@Import(MemoryConfig.class)
 //@Import(JdbcTemplateV1Config.class)
-@Import(JdbcTemplateV2Config.class)
+//@Import(JdbcTemplateV2Config.class)
+@Import(JdbcTemplateV3Config.class)
 @SpringBootApplication(scanBasePackages = "hello.item.web")
 public class ItemServiceDatabaseApplication {
 
