@@ -39,7 +39,7 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
 
     @Override
     public Item save(Item item) {
-        String sql = "insert into item (item_name, price, quantity)" +
+        String sql = "insert into item (item_name, price, quantity) " +
                 "values (:itemName, :price, :quantity)";
 
         BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(item);
@@ -54,8 +54,8 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
 
     @Override
     public void update(Long itemId, ItemUpdateDto updateParam) {
-        String sql = "update item set" +
-                "item_name = :itemName, price = :price, quantity = :quantity" +
+        String sql = "update item set " +
+                "item_name = :itemName, price = :price, quantity = :quantity " +
                 "where id = :id";
 
         MapSqlParameterSource param = new MapSqlParameterSource()
