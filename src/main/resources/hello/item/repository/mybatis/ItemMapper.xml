@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="hello.item.repository.mybatis.ItemMapper">
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO (
+        INSERT INTO item (
             item_name,
             price,
             quantity
@@ -48,7 +48,7 @@
                 AND item_name LIKE CONCAT('%', #{itemName}, '%')
             </if>
             <if test="maxPrice != null">
-                AND price $lt;= #{maxPrice}
+                AND price &lt;= #{maxPrice}
             </if>
         </where>
     </select>
