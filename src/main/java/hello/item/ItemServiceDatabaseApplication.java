@@ -1,7 +1,6 @@
 package hello.item;
 
-import hello.item.config.JdbcTemplateV3Config;
-import hello.item.config.MyBatisConfig;
+import hello.item.config.JpaConfig;
 import hello.item.repository.ItemRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -15,7 +14,8 @@ import org.springframework.context.annotation.Profile;
 //@Import(JdbcTemplateV1Config.class)
 //@Import(JdbcTemplateV2Config.class)
 //@Import(JdbcTemplateV3Config.class)
-@Import(MyBatisConfig.class)
+//@Import(MyBatisConfig.class)
+@Import(JpaConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.item.web")
 public class ItemServiceDatabaseApplication {
 
